@@ -2,7 +2,7 @@
   "name": "waglpz/rabbitmqcore",
   "description": "WAG RabbitMQ",
   "license": "MIT",
-  "type": "project",
+  "type": "package",
   "minimum-stability": "stable",
   "prefer-stable": true,
   "config": {
