@@ -1,13 +1,11 @@
 <?php
 
-declare(strict_types=1);
-
-$default = [
+$default = array(
     'hostname'=>'10.120.5.2',
     'port' => '5672',
     'username' => 'guest',
     'password' => 'guest',
-];
+);
 
 $envSpecificConfig = __DIR__ . 'connection.' . getenv('APP_ENV') . '.php';
 

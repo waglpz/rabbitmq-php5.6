@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use PhpAmqpLib\Message\AMQPMessage;
@@ -10,29 +8,22 @@ use WAG\RabbitMq\ProducerConfirmed;
 
 $config = include __DIR__ . '/../config/main.php';
 
-[
-    'hostname' => $hostname,
-    'port' => $port,
-    'username' => $username,
-    'password' => $password,
-] = $config['connection'];
-
-$exchangeName         ='exsampleExchangeName';
+$exchangeName         = 'exampleExchangeName';
 $exchangeDeclarations = $config['exchangeDeclarations'][$exchangeName];
 
 $channelBuilder = new ChannelBuilder(
-    $hostname,
-    $port,
-    $username,
-    $password
+    $config['connection']['hostname'],
+    $config['connection']['port'],
+    $config['connection']['username'],
+    $config['connection']['password']
 );
 
-$ackFunction =static function () : void {
-    echo 'Message done',\PHP_EOL;
+$ackFunction = static function () {
+    echo 'Message done', \PHP_EOL;
 };
 
-$nackFunction =static function () : void {
-    echo 'Message not done ! Error !',\PHP_EOL;
+$nackFunction = static function () {
+    echo 'Message not done ! Error !', \PHP_EOL;
 };
 
 

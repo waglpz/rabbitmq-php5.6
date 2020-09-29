@@ -5,12 +5,7 @@
     <arg name="colors"/>
 
     <!-- inherit rules from: -->
-    <rule ref="Doctrine">
-        <exclude name="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly"/>
-        <exclude name="SlevomatCodingStandard.Classes.DisallowLateStaticBindingForConstants"/>
-    </rule>
-    <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalConstants"/>
-    <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions"/>
+    <rule ref="PSR2"/>
     <rule ref="Generic.Files.LineLength">
         <exclude-pattern>*/var/*</exclude-pattern>
     </rule>

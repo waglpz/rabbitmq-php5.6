@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types=1);
-
-return [
+return array(
     'hostname'=>'',
     'port' => '5672',
     'username' => 'guest',
     'password' => 'guest',
-];
+);

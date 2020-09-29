@@ -39,8 +39,3 @@ jobs:
     - name: Run Code style check
       run: composer run-script cs-check
 
-    - name: Run Static analyser check
-      run: composer run-script analyse
-
- #   - name: Run Unit tests
- #     run: composer run-script test-unit

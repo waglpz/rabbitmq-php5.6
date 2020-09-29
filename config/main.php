@@ -1,15 +1,15 @@
 <?php
 
-declare(strict_types=1);
 
-return [
+
+return array(
     'connection'=> include 'connection.php',
-    'exchangeDeclarations'=> [
-        'exsampleExchangeName' =>[
-            'queues'=>[
-                'exampleQueueName1' => [], // Parametererweiterung in Zukunft wenn
-                'exampleQueueName2' => [],
-            ],
-        ],
-    ],
-];
+    'exchangeDeclarations'=> array(
+        'exampleExchangeName' =>array(
+            'queues'=>array(
+                'exampleQueueName1' => array(), // Parametererweiterung in Zukunft wenn
+                'exampleQueueName2' => array(),
+        ),
+    ),
+),
+);

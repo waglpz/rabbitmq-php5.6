@@ -40,4 +40,9 @@ networks:
     driver: bridge
     ipam:
       config:
-        - subnet: 10.120.5.0/24            
+        - subnet: 10.120.5.0/24
+
+## to accessing rabbitmq GUI please open
+# http://10.120.5.2:15672/
+# user guest
+# password guest
