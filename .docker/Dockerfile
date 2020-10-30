@@ -31,11 +31,10 @@ RUN groupadd -g ${APPUGID} nutzer;    \
 # composer
 ENV COMPOSER_HOME /home/nutzer
 
-RUN curl -sS https://getcomposer.org/installer |                \
-       php -- --install-dir=/usr/local/bin --filename=composer  \
-    && composer global require hirak/prestissimo                \
-#    && composer global require maglnet/composer-require-checker \
-    && chown -R nutzer:nutzer $COMPOSER_HOME
+RUN curl -sS https://getcomposer.org/installer | \
+       php -- --install-dir=/usr/local/bin       \
+       --filename=composer                       \ 
+       && chown -R nutzer:nutzer $COMPOSER_HOME
 
 WORKDIR /app
 
